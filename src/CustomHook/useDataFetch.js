@@ -17,7 +17,8 @@ const useDataFetch = (urlBase, queryParams, queryString) => {
             fetch(urlBase+queryParams+queryString)
                 .then(response => response.json())
                 .then(jsonResponse => {
-                    setData(JSON.parse(jsonResponse));
+                    setData(jsonResponse);
+                    // setData(JSON.parse(jsonResponse));
                     // setLoading(false);
                 })
         } catch (err) {
